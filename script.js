@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-    // URL DE NODO WEBHOOK EN N8N (¡Asegúrate de que esta URL sea la de producción y esté activa!)
-    const N8N_WEBHOOK_URL = "https://fernandaalcantara.app.n8n.cloud/webhook/4866e093-f879-4557-b0e1-90657fa0e3ba";
+    // URL DE NODO WEBHOOK EN N8N
+    const N8N_WEBHOOK_URL = "https://fernandaalcantara.app.n8n.cloud/webhook/2b9c4088-7661-4e69-8aa7-b1e92945b1fb";
 
     // Referencias a los elementos del DOM
     const btnCalcular = document.getElementById('btnCalcular');
@@ -74,4 +74,5 @@ document.addEventListener('DOMContentLoaded', () => {
             divError.style.display = 'block';
         });
     });
+
 });
