@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es" class="h-100">
+<html lang="es" class="h-100" data-bs-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,12 +9,14 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
 
     <style>
-        /* Un fondo con gradiente sutil y flex para el footer pegajoso */
+        /* Un fondo con gradiente elegante y flex para el footer pegajoso */
         body {
             display: flex;
             flex-direction: column;
             min-height: 100vh;
-            background: linear-gradient(to right, #f8f9fa, #e9ecef);
+            /* Gradiente de azul oscuro a gris oscuro */
+            background: linear-gradient(135deg, #1f2833, #2c3e50);
+            background-attachment: fixed; /* Fija el gradiente durante el scroll */
         }
         main {
             flex-shrink: 0;
@@ -22,11 +24,49 @@
         .footer {
             margin-top: auto;
         }
+
+        /* Navbar y Footer personalizados */
+        .bg-custom-nav-footer {
+            /* Color sólido oscuro, ligeramente transparente */
+            background-color: rgba(26, 37, 47, 0.8);
+            backdrop-filter: blur(5px); /* Efecto cristal */
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .footer.bg-custom-nav-footer {
+            border-bottom: 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* Tarjeta principal con efecto "Glassmorphism" */
+        .card-glass {
+            background: rgba(44, 62, 80, 0.5); /* Azul-gris semi-transparente */
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 1rem; /* Bordes más redondeados */
+        }
+
+        /* Títulos */
+        h1.display-5 {
+            color: #ffffff; /* Blanco para el título principal */
+        }
+        .lead {
+            color: #c5c6c7; /* Un gris claro para el subtítulo */
+        }
+
+        /* Botón - un azul más vibrante */
+        .btn-primary {
+            --bs-btn-bg: #007bff;
+            --bs-btn-border-color: #007bff;
+            --bs-btn-hover-bg: #0056b3;
+            --bs-btn-hover-border-color: #0056b3;
+            font-weight: 600;
+            padding: 0.75rem 1rem;
+        }
     </style>
 </head>
-<body class="d-flex flex-column min-vh-100">
+<body>
 
-    <nav class="navbar navbar-dark bg-primary shadow-sm">
+    <nav class="navbar navbar-dark bg-custom-nav-footer shadow-sm">
         <div class="container">
             <a class="navbar-brand" href="#">
                 <i class="bi bi-robot me-2"></i>
@@ -41,11 +81,11 @@
                 
                 <div class="text-center mb-4">
                     <h1 class="display-5 fw-bold">Calculadora Inteligente</h1>
-                    <p class="lead text-muted">Escribe cualquier operación aritmética en lenguaje natural.</p>
+                    <p class="lead">Escribe cualquier operación aritmética en lenguaje natural.</p>
                     <p class="small">(Ej: "raíz cuadrada de 81" o "5 elevado a la 3")</p>
                 </div>
 
-                <div class="card shadow-lg border-0">
+                <div class="card shadow-lg card-glass">
                     <div class="card-body p-4 p-md-5">
                         
                         <div class="mb-3">
@@ -76,7 +116,7 @@
         </div>
     </main>
 
-    <footer class="footer bg-dark text-white text-center p-4">
+    <footer class="footer bg-custom-nav-footer text-white text-center p-4">
         <div class="container">
             <p class="mb-0">&copy; 2025 | Desarrollado por Fernanda Alcantara.</p>
         </div>
